@@ -15,8 +15,6 @@ function fetchAllBooks() {
     .then(books => renderBooks(books))
 }
 
-let bookID;
-
 function fetchOneBook(bookID){
     fetch(`http://localhost:3000/books/${bookID}`)
     .then(res => res.json())
@@ -26,16 +24,16 @@ function fetchOneBook(bookID){
 function fetchReadBook(bookID){
     fetch(`http://localhost:3000/books/${bookID}`)
     .then(res => res.json())
-    .then(book => updateBookReaders(book))
+    .then(book => fetchUser1AndReadBook(book))
 }
 
-function fetchUser1(book){
+function fetchUser1AndReadBook(book){
     fetch("http://localhost:3000/users/1")
     .then(res => res.json())
-    .then(user => addUserToBook(user, book))
+    .then(user1 => addUserToBook(user1, book))
 }
 
-function fetchAddUserToBook(book, newUserArray){
+function fetchToggleUserReadBook(book, newUserArray){
     fetch(`http://localhost:3000/books/${bookID}`, {
         method: 'PATCH',
         headers: {
@@ -63,6 +61,8 @@ function renderOneBook(book){
     bookListUL.appendChild(bookLI)
 }
 
+let bookID
+
 function clickOnBook(event){
     if (event.target.dataset.isBookLink){
         bookID = event.target.dataset.id
@@ -71,25 +71,9 @@ function clickOnBook(event){
     }
 }
 
-// This function is not used
-function showBookUsers(book){
-    const ul = document.createElement("ul")
-
-    book.users.forEach(user => {
-        const li = document.createElement("li")
-        li.innerText = user.username
-        ul.append(li)
-    })
-    return ul
-
-}
-
 function showBookDetail(book) {
     const showPanel = document.getElementById("show-panel")
-    let usernames = "";
-
-    console.log(book)
-    console.log(book.users)
+    let usernames = ""
 
     book.users.forEach(user => {
         usernames += user.username + ", "
@@ -102,30 +86,28 @@ function showBookDetail(book) {
     <p>Users who have read this book: ${usernames}</p>
     <button onclick="fetchReadBook(${bookID})">Read this book</button>
     `
-    // bookDetail += showBookUsers(book)
 
     showPanel.innerHTML = bookDetail
 }
 
-function updateBookReaders(book) {
-    fetchUser1(book)
-}
-
 function addUserToBook(user1, book){
-    book.users.push(user1)
-    const newUserArray = book.users
+    let newUserArray = book.users
+    const bookUsernames = []
 
-    // fetchAddUserToBook(book, newUserArray)
-
-    fetch(`http://localhost:3000/books/${bookID}`, {
-        method: 'PATCH',
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            users: newUserArray
-        })
+    newUserArray.forEach(user => {
+        bookUsernames.push(user.username)
     })
-    .then(res => res.json())
-    .then(showBookDetail(book))
+
+    if (bookUsernames.includes(user1.username) === true){
+        book.users.pop()
+        newUserArray = book.users
+
+        fetchToggleUserReadBook(book, newUserArray)
+    } else {
+        book.users.push(user1)
+        newUserArray = book.users
+
+        fetchToggleUserReadBook(book, newUserArray)
+    }
+
 }
