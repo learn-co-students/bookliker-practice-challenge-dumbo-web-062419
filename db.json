@@ -7,12 +7,16 @@
       "img_url": "http://books.google.com/books/content?id=CEMZ1OoPDIAC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
         {
-          "id": 2,
-          "username": "auer"
+          "id": 6999,
+          "username": "woooop"
         },
         {
-          "id": 8,
-          "username": "goodwin"
+          "id": 987654321,
+          "username": "newname"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -23,16 +27,8 @@
       "img_url": "http://books.google.com/books/content?id=pkwCDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
         {
-          "id": 10,
-          "username": "macejkovic"
-        },
-        {
-          "id": 4,
-          "username": "batz"
-        },
-        {
-          "id": 6,
-          "username": "steuber"
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -43,12 +39,16 @@
       "img_url": "http://books.google.com/books/content?id=xTSmAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
         {
-          "id": 8,
-          "username": "goodwin"
+          "id": 987654321,
+          "username": "newname"
         },
         {
-          "id": 9,
-          "username": "nikolaus"
+          "id": 987654321,
+          "username": "newname"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
         }
       ]
     },
@@ -58,6 +58,10 @@
       "description": "When the man she had helped convict of the rape and murder of her sister is set free because of exculpatory evidence, FBI scientist Olivia St. Martin launches her own investigation to uncover the truth about the case, only to discover that a brutal serial killer has been at large for years and, posing as a field agent, joins forces with Seattle detective Zack Travis to stop the monster. Original.",
       "img_url": "http://books.google.com/books/content?id=S3yODQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
+        {
+          "id": 6999,
+          "username": "woooop"
+        },
         {
           "id": 10,
           "username": "macejkovic"
@@ -111,6 +115,14 @@
       "img_url": "http://books.google.com/books/content?id=nSEVSnb8wpUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
         {
+          "id": 6999,
+          "username": "woooop"
+        },
+        {
+          "id": 6999,
+          "username": "woooop"
+        },
+        {
           "id": 3,
           "username": "marvin"
         },
@@ -147,6 +159,22 @@
       "img_url": "http://books.google.com/books/content?id=hmbACwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
         {
+          "id": 6999,
+          "username": "woooop"
+        },
+        {
+          "id": 6999,
+          "username": "woooop"
+        },
+        {
+          "id": 987654321,
+          "username": "newname"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
           "id": 8,
           "username": "goodwin"
         },
@@ -166,6 +194,22 @@
       "description": "Five short tales, including 'Plumbing for Willy' and 'Death on the Cape,' follow the adventures of a former cleaning woman and her occasionally befuddled mate",
       "img_url": "http://books.google.com/books/content?id=dK5Gx6vbV2YC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "users": [
+        {
+          "id": 6999,
+          "username": "woooop"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
+        {
+          "id": 1,
+          "username": "pouros"
+        },
         {
           "id": 8,
           "username": "goodwin"
